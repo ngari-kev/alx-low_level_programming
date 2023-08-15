@@ -1,10 +1,11 @@
-/**
-  * The function prints to standard output
-*/
 #include <stdio.h>
 
-int main(void) /*Returns an intger value of 0*/
+/**
+*main - The function prints to standard output
+*Return: 0 (Succes)
+*/
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
