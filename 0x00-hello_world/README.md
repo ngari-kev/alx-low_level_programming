@@ -3,3 +3,4 @@ This directory holds various tasks as elaborated below:
 1-compiler - Compiles a C file but does not link
 2-assembler - generates assembly code
 3-name - Compile and generate an exec file
+4-puts.c - pints "Programming is like building a multilingual puzzle" followed by a new line
