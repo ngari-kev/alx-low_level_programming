@@ -4,3 +4,5 @@ This directory holds various tasks as elaborated below:
 2-assembler - generates assembly code
 3-name - Compile and generate an exec file
 4-puts.c - pints "Programming is like building a multilingual puzzle" followed by a new line
+4-printf.c - pints with proper grammar, but the outcome is a piece of art,
+6-size.c - prints size of vaious variable types
