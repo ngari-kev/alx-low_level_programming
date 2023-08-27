@@ -16,22 +16,12 @@ int _strcmp(char *s1, char *s2)
 		{
 			t = s1[i] - s2[i];
 			if (t > 0)
-				t = 15;
+				return (t);
 			else if (t < 0)
-				t = -15;
-			else
-				t = 0;
-			return (t);
+				return (t);
+			else if (t == 0)
+				return (t);
 		}
-		i++;
 	}
-	/* Compare the lengths of the strings*/
-	t = s1[i] - s2[i];
-	if (t > 0)
-		t = 15;
-	else if (t < 0)
-		t = -15;
-	else
-		t = 0;
 	return (t);
 }
