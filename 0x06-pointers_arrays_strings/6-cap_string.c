@@ -20,7 +20,7 @@ char *cap_string(char *str)
 		if (str[j - 1] == ' ' || str[j - 1] == ',' || str[j - 1] == ';' ||
 		str[j - 1] == '.' || str[j - 1] == '!' || str[j - 1] == '?' ||
 		str[j - 1] == '"' || str[j - 1] == '(' || str[j - 1] == ')' ||
-		str[j - 1] == '{' || str[j - 1] == '}')
+		str[j - 1] == '{' || str[j - 1] == '}' || str[j - 1] == '\n')
 		{
 			/* Check if the current character is a lowercase letter*/
 			if (x >= 'a' && x <= 'z')
