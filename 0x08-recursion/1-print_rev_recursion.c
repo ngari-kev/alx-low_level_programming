@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_puts_rev_recursion - prints a string in reverse oreder
+*_print_rev_recursion - prints a string in reverse oreder
 *@s: pointer to string
 *
 *
