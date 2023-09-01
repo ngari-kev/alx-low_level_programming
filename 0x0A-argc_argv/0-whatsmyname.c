@@ -4,10 +4,10 @@
 *@argv: pointer to first element(first argument)
 *Return: 0 (success)
 */
-#include <stdio.h>
+#include "main.h"
 int main(int argc, char *argv[])
 {
         if (argc)
-		printf("%s\n", argv[0]);
+		printf("%s\n", *argv);
         return (0);
 }
