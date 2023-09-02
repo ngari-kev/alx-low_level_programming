@@ -7,7 +7,12 @@
 #include "main.h"
 int main(int argc, char *argv[])
 {
-	if (argv)
-		printf("%d\n", argc);
+	int i;
+
+	for (i = 1; i <= argc; i++)
+	{
+		if (argv)
+			printf("%d\n", i);
+	}
 	return (0);
 }
