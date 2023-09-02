@@ -9,10 +9,16 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 
-	if (*argv[argc] > 0)
+	if (argv[i])
 	{
-		argc--;
-		i++;
+		if (argc > 0)
+		{
+			i = argc - 1;
+		}
+		else if (argc == 0)
+		{
+			i = 0;
+		}
 	}
 	printf("%d", i);
 	return (0);
