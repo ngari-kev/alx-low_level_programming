@@ -1,6 +1,8 @@
 #ifndef MAIN
 #define MAIN
-int whatismyname(int argc, char *argv[]);
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char *argv[]);
 int _putchar(char c);
 
 
