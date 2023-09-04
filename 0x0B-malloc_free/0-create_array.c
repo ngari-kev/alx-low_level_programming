@@ -23,10 +23,5 @@ char *create_array(unsigned int size, char c)
 			a[i] = c;
 		}
 	}
-	if (a == NULL)
-	{
-		printf("cant allocate %d bytes", size);
-		return (NULL);
-	}
 	return (a);
 }
