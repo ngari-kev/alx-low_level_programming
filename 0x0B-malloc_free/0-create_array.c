@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *create_array - creates an array of characters and initializes to a specific character
+ *create_array - creates an array of characters and
+ *initializes to a specific character
  *@size: number of bytes to create
  *@c: specific character value to initialize to
- *Return: pointer to start of memory 
+ *Return: pointer to start of memory
  */
 char *create_array(unsigned int size, char c)
 {
