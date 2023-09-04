@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		i1++;
 	while (s2[i2] != '\0')
 		i2++;
-	dup = malloc(sizeof(char) * (i1 + i2 + 2));
+	dup = malloc(sizeof(char) * (i1 + i2 + 1));
 	if (dup == NULL)
 		return (NULL);
 	while (s1[a] != '\0')
@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 		dup[a] = s1[a];
 		a++;
 	}
-	while (s2[b] == '\0')
+	while (s2[b] != '\0')
 	{
 		dup[a] = s2[b];
 		b++;
