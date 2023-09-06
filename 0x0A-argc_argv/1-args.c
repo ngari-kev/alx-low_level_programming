@@ -7,15 +7,10 @@
 #include "main.h"
 int main(int argc, char *argv[])
 {
-	int i, j = 0;
+	int p = 0;
 
-	for (i = 1; i < argc; i++)
-	{
-		if (argv[i] != NULL)
-		{
-			j++;
-		}
-	}
-	printf("%d", j);
+	p = argc - 1;
+	(void)argv/*ignore argv*/
+	printf("%d", p);
 	return (0);
 }
