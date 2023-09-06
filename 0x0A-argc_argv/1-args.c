@@ -7,17 +7,15 @@
 #include "main.h"
 int main(int argc, char *argv[])
 {
-	int i = 0;
+	int i, j = 0;
 
-	argv++;
-	if (argc > 0)
+	for (i = 1; i < argc; i++)
 	{
-		i = argc - 1;
+		if (argv[i] != NULL)
+		{
+			j++;
+		}
 	}
-	else if (argc == 0)
-	{
-		i = 0;
-	}
-	printf("%d", i);
+	printf("%d", j);
 	return (0);
 }
