@@ -9,8 +9,11 @@ int main(int argc, char *argv[])
 {
 	int p = 0;
 
-	p = argc - 1;
-	(void)argv/*ignore argv*/
-	printf("%d", p);
+	(void)argv;/*ignore argv*/
+	if (argc > 0)
+	{
+		p = argc - 1;
+		printf("%d\n", p);
+	}
 	return (0);
 }
