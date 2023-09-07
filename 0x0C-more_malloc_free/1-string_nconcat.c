@@ -30,6 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*ptr = '\0'; /* Handle the case where s1 is NULL*/
 	/* Concatenate characters from s2 up to n*/
 	strncat(ptr, s2, n);
-	return ptr;
+	return (ptr);
 }
 
