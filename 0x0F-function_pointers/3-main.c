@@ -7,7 +7,7 @@
   */
 int main(int argc, char *argv[])
 {
-	int n1, n2, result, (*f)(int,int);
+	int n1, n2, result, (*f)(int, int);
 	char *operator;
 
 	if (argc != 4)
