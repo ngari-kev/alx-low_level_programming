@@ -19,9 +19,9 @@ void fib(int n)
 		i++;
 	}
 	if (i == n)
-		{
-			printf("%ld\n", c);
-		}
+	{
+		printf("%ld\n", c);
+	}
 }
 
 
