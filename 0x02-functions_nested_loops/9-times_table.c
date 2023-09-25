@@ -13,7 +13,11 @@ void times_table(void)
 		{
 			k = i * j;
 
-			if (k >= 10)
+			if (j == 0)
+			{
+				printf("%d", k);
+			}
+			else if (k >= 10)
 			{
 				printf("%3d", k);
 			}
