@@ -6,23 +6,24 @@
 void fib(int n)
 {
 	long int a = 1, b = 2, c = 0;
-	int i = 0;
+	int i = 2;
 
 	printf("%ld, ", a);
 	printf("%ld, ", b);
-	while (i <= n)
+	while (i < n)
 	{
 		c = a + b;
 		a = b;
 		b = c;
 		printf("%ld, ", c);
-		if (i == n)
+		i++;
+	}
+	if (i == n)
 		{
 			printf("%ld\n", c);
 		}
-		i++;
-	}
 }
+
 
 /**
   *main - prints fibonacci series to a specified limit
