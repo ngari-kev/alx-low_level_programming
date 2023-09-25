@@ -5,19 +5,22 @@
   */
 void fib(int n)
 {
-	int a = 1, b = 2, c;
+	long int a = 1, b = 2, c = 0;
+	int i = 0;
 
-	printf("%d", a);
-	while (b <= n)
+	printf("%ld, ", a);
+	printf("%ld, ", b);
+	while (i <= n)
 	{
-		printf(", %d", b);
 		c = a + b;
 		a = b;
 		b = c;
-		if (b > n)
+		printf("%ld, ", c);
+		if (i == n)
 		{
-			printf("\n");
+			printf("%ld\n", c);
 		}
+		i++;
 	}
 }
 
