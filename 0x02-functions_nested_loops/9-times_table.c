@@ -19,7 +19,7 @@ void times_table(void)
 			}
 			else
 			{
-				printf("%2d", k);
+				printf(" %2d", k);
 			}
 			if (j < 9)
 			{
