@@ -18,6 +18,10 @@ void fib(int n)
 		if (i == n)
 		{
 			c = a + b;
+			if (c < 0)
+			{
+				c *= -1;
+			}
 			printf("%ld\n", c);
 		}
 		else
@@ -25,6 +29,10 @@ void fib(int n)
 			c = a + b;
 			a = b;
 			b = c;
+		        if (c < 0)
+			{
+				c *= -1;
+			}
 			printf("%ld, ", c);
 		}
 		i++;
