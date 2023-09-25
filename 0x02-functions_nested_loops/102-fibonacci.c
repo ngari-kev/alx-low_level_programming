@@ -6,21 +6,28 @@
 void fib(int n)
 {
 	long int a = 1, b = 2, c = 0;
-	int i = 2;
+	int i = 1;
 
 	printf("%ld, ", a);
+	i++;
 	printf("%ld, ", b);
-	while (i < n)
+	i++;
+
+	while (i <= n)
 	{
-		c = a + b;
-		a = b;
-		b = c;
-		printf("%ld, ", c);
+		if (i == n)
+		{
+			c = a + b;
+			printf("%ld\n", c);
+		}
+		else
+		{
+			c = a + b;
+			a = b;
+			b = c;
+			printf("%ld, ", c);
+		}
 		i++;
-	}
-	if (i == n)
-	{
-		printf("%ld\n", c);
 	}
 }
 
