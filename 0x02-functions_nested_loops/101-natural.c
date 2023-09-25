@@ -1,5 +1,21 @@
 #include <stdio.h>
 /**
+  *main - prints sum of multiples of 3 and 5
+  *Return: 0
+  *
+  */
+int multiples(int);
+int main(void)
+{
+	int o = 0;
+
+	o = multiples(1024);
+	printf("%d\n", o);
+	return(0);
+}
+
+
+/**
   *multiples - prints sum of multiples of 3 and 5
   *@n: range within which to check for multiples
   *Return: 0
