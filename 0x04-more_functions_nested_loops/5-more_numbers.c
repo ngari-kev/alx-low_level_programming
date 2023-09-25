@@ -7,25 +7,17 @@
 void more_numbers(void)
 {
 	int i = 0, j = 0;
+	char str[20] = {0,1,2,3,4,5,6,7,8,9,1,0,1,1,1,2,1,3,1,4};
 
-	while (j < 10)
+	while (i <= 11)
 	{
-		while (i <= 14)
+		j = 0;
+		while (j <= 19)
 		{
-			if (i > 9)
-			{
-				_putchar((i / 10) + '0');
-				_putchar((i % 10) + '0');
-				i++;
-			}
-			else
-			{
-				_putchar(i + '0');
-				i++;
-			}
+			_putchar(str[j] + '0');
+			j++;
 		}
 		_putchar('\n');
-		i = 0;
-		j++;
+		i++;
 	}
 }
