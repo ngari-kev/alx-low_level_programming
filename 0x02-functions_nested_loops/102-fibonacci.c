@@ -27,7 +27,6 @@ void fib(int n)
   */
 int main(void)
 {
-    fib(50);
-
-    return (0);
+	fib(50);
+	return (0);
 }
