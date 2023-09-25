@@ -15,7 +15,7 @@ void times_table(void)
 
 			if (k >= 10)
 			{
-				printf("%2d", k);
+				printf(" %2d", k);
 			}
 			else
 			{
