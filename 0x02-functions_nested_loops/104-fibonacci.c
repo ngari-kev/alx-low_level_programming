@@ -29,7 +29,7 @@ void fib(int n)
 			c = a + b;
 			a = b;
 			b = c;
-		        if (c < 0)
+			if (c < 0)
 			{
 				c *= -1;
 			}
