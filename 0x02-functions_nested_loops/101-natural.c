@@ -1,19 +1,20 @@
 #include <stdio.h>
 /**
-  *main - prints sum of multiples of 3 and 5
+  *multiples - prints sum of multiples of 3 and 5
+  *@n: range within which to check for multiples
   *Return: 0
   */
-int main(void)
+int multiples(int n)
 {
-	int n = 0, sum = 0;
+	int i = 0, sum = 0;
 
-	for (n; n < 1024; n++)
+	while (i < n)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
-			sum += n;
+			sum += i;
 		}
+		i++;
 	}
-	printf("%d", sum);
-	return (0);
+	return (sum);
 }
