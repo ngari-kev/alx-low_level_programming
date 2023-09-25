@@ -15,11 +15,11 @@ void times_table(void)
 
 			if (k >= 10)
 			{
-				printf(" %2d", k);
+				printf("%3d", k);
 			}
 			else
 			{
-				printf(" %2d", k);
+				printf("%3d", k);
 			}
 			if (j < 9)
 			{
