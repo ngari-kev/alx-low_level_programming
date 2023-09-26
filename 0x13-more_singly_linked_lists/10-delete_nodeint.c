@@ -27,8 +27,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	/* Iterate through the list to find where our index lies */
 	while (h != NULL && count < index - 1)
 	{
-		if (h == NULL || h->next == NULL)
-			return (-1); 
 		prev = h;
 		h = h->next;
 		count++;
