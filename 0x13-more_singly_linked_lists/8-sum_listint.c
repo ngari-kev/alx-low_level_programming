@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
   *sum_listint - sums the data held in every node
-  *@h: pointer to head node
+  *@head: pointer to head node
   *Return: sum or 0 if h is null
   */
 int sum_listint(listint_t *head)
