@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * int delete_nodeint_at_index - deletes a node at specific index
+ * delete_nodeint_at_index - deletes a node at specific index
  * @head: pointer to the pointer of the head of the list
  * @index: index
  * Return: 1 success and -1 failure.
@@ -37,6 +37,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	}
 	prev->next = h->next;
-	free (h);
+	free(h);
 	return (1);
 }
