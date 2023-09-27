@@ -5,41 +5,43 @@
   */
 void print_all(const char * const format, ...)
 {
-	int i;
-	double f;
-	char c, *s;
-	va_list ap;
+	int i = 0;
+	char *str, *separator = "";
 
-	const char *p = format;/*Because it won't be possible to increment format*/
-	va_start(ap, format);
-	while (*p != 0)
+	va_list list;
+
+	va_start(list, format);
+
+	if (format != NULL)
 	{
-		switch (*p)
+		while (format[i])
 		{
-			case 'c':
-				c = va_arg(ap, int);
-				printf("%c, ", c);
-				break;
-			case 'i':
-				i = va_arg(ap, int);
-				printf("%d, ", i);
-				break;
-			case 'f':
-				f = va_arg(ap, double);
-				printf("%f, ", f);
-				break;
-			case 's':
-				s = va_arg(ap, char *);
-				if (s == NULL)
-					printf("(nil)");
-				if (s != NULL)
-					printf("%s, ", s);
-				break;
-			default:
-				break;
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", separator, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", separator, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", separator, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", separator, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			separator = ", ";
+			i++;
 		}
-		p++;
 	}
-	va_end(ap);
+
 	printf("\n");
+	va_end(list);
 }
