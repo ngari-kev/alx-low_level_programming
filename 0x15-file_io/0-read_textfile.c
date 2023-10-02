@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * read_textfile - Read a text file and return its content as a string.
  *
@@ -22,16 +23,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (FileDescriptor == -1)
 	{
 		/* Handle file open error */
-		return 0;
+		return (0);
 	}
 
 	buffer = malloc(letters + 1);
 	/* +1 for null terminator */
-	
 	if (buffer == NULL) /*memory allocation error*/
 	{
 		close(FileDescriptor);
-		return 0;
+		return (0);
 	}
 
 	CharactersRead = read(FileDescriptor, buffer, letters);
@@ -41,12 +41,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		/* Handle read error */
 		close(FileDescriptor);
 		free(buffer);
-		return 0;
+		return (0);
 	}
 	/* Null-terminate the buffer */
 	buffer[CharactersRead] = '\0';
 	close(FileDescriptor);
 	/* At this point, 'buffer' contains the file content as a string */
-	return CharactersRead;
+	return (CharactersRead);
 }
 
