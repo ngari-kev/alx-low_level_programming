@@ -16,7 +16,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int FileDescriptor;
-	ssize_t CharactersRead;
+	ssize_t CharactersRead, CharactersWritten;
 	char *buffer;
 
 	FileDescriptor = open(filename, O_RDONLY);
@@ -47,8 +47,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	/* Null-terminate the buffer */
 	buffer[CharactersRead] = '\0';
-	close(FileDescriptor);
 	/* At this point, 'buffer' contains the file content as a string */
-	return (CharactersRead);
+	CharactersWritten = write(STDOUT_FILENO, buffer, CharactersRead);
+	if (CharactersWritten == -1)
+		return (0);
+	
+	close(FileDescriptor);
+	free(buffer);
+	return (CharactersWritten);
 }
 
